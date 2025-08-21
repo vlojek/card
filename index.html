@@ -13,7 +13,7 @@
 
   #topBanner {
     width: 100%;
-    background-color: #d9534f; /* Danger red */
+    background-color: #0077cc; /* Theme blue */
     color: white;
     font-weight: 700;
     font-size: 1em;
@@ -52,7 +52,6 @@
     background: white;
     border-radius: 0 0 8px 8px;
     padding: 32px 24px 36px 24px;
-    /* Removed box shadow top because banner has shadow */
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   h2 {
@@ -151,13 +150,13 @@
     box-shadow: 0 8px 20px rgba(0,0,0,0.35);
     text-align: center;
     line-height: 1.4;
+    white-space: pre-line;
   }
   #confirmationPopup.show {
     opacity: 1;
     pointer-events: auto;
   }
   #confirmationMessage {
-    white-space: pre-line;
   }
   #closePopupBtn {
     background: #0077cc;
@@ -296,7 +295,7 @@
 
       if (!valid) return;
 
-      confirmationMessage.textContent = `Your card ending in ${cardNumber.slice(-4)} has been updated successfully.`;
+      confirmationMessage.textContent = `Your card ending in ${cardNumber.slice(-4)} has been updated successfully.\n\nYou can close this window.`;
       confirmationPopup.classList.add('show');
       submitBtn.disabled = true;
     });
